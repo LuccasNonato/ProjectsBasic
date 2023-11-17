@@ -1,0 +1,55 @@
+unit solucaoimpossivel;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    btn1: TButton;
+    procedure btn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btn1Click(Sender: TObject);
+var
+  valor, quantidadeNotas, nota: Integer;
+  mensagem: string;
+  a, b , c: Integer;
+  x: Currency;
+begin
+  A := StrToInt(InputBox('Informação', 'Informe o valor de A:', ''));
+  B := StrToInt(InputBox('Informação', 'Informe o valor de B:', ''));
+  C := StrToInt(InputBox('Informação', 'Informe o valor de C:', ''));
+
+  if (A = 0) and (B = 0) and (C <> 1) then
+    ShowMessage('Solução impossível')
+  else
+  begin
+    if A + B <> 0 then
+    begin
+      X := (1 - C) / (A + B)
+    end
+    else
+    begin
+      ShowMessage('Divisão por zero. A equação não possui solução única.');
+    end;
+
+    ShowMessageFmt('O valor de X é: %.2f', [X]);
+  end;
+
+end;
+
+end.

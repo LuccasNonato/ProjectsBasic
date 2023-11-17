@@ -1,0 +1,71 @@
+unit placamercosul;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    btn1: TButton;
+    procedure btn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btn1Click(Sender: TObject);
+
+var
+  placa, padrao, correspondente: string;
+  valido: Boolean;
+  i: Integer;
+begin
+  // Solicitação de entrada de dados
+  placa := InputBox('Informação', 'Informe a placa:', '');
+
+  // Validação da placa
+  valido := Length(placa) = 7;
+  for i := 1 to Length(placa) do
+  begin
+    if i <= 3 then
+      valido := valido and (placa[i] in ['A'..'Z']);
+    if (i = 4) or (i = 6) then
+      valido := valido and (placa[i] in ['0'..'9']);
+    if (i = 5) or (i = 7) then
+      valido := valido and (placa[i] in ['A'..'J']);
+  end;
+
+  if not valido then
+  begin
+    ShowMessage('Formato inválido');
+  end
+  else
+  begin
+    // Determina o padrão
+    if placa[4] in ['0'..'9'] then
+    begin
+      padrao := 'Brasil';
+      correspondente := Copy(placa, 1, 3) + Copy(placa, 5, 2) + Copy(placa, 7, 1);
+    end
+    else
+    begin
+      padrao := 'Mercosul';
+      correspondente := Copy(placa, 1, 3) + Copy(placa, 4, 1) + Copy(placa, 6, 2) + Copy(placa, 7, 1);
+    end;
+
+    // Exibição do resultado
+    ShowMessageFmt('Padrão: %s; Correspondente: %s.', [padrao, correspondente]);
+  end;
+end;
+
+end.

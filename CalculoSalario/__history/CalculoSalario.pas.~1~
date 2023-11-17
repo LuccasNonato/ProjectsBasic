@@ -1,0 +1,50 @@
+unit CalculoSalario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore,
+  dxSkinsDefaultPainters, cxTextEdit;
+
+type
+  TForm2 = class(TForm)
+    btncalcular: TButton;
+    procedure btncalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+  var
+   horasPorDia, precoHora, diasTrabalhados, salarioBruto, salarioLiquido, desconto: real;
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btncalcularClick(Sender: TObject);
+begin
+  horasPorDia := StrToFloat(InputBox('Informação', 'Informe a quantidade de horas trabalhadas por dia:', ''));
+  precoHora := StrToFloat(InputBox('Informação', 'Informe o preço da hora trabalhada:', ''));
+  diasTrabalhados := StrToFloat(InputBox('Informação', 'Informe a quantidade de dias trabalhados no mês:', ''));
+
+  salarioBruto := horasPorDia * precoHora * diasTrabalhados;
+
+  // Cálculo do desconto (3% sobre o salário bruto)
+  desconto := 0.03 * salarioBruto;
+
+  // Cálculo do salário líquido
+  salarioLiquido := salarioBruto - desconto;
+
+  // Exibição do resultado usando ShowMessage
+  ShowMessage('Salário Bruto: ' + FormatFloat('0.00', salarioBruto) + sLineBreak +
+              'Desconto (3%): ' + FormatFloat('0.00', desconto) + sLineBreak +
+              'Salário Líquido: ' + FormatFloat('0.00', salarioLiquido));
+end;
+
+end.

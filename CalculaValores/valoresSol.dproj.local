@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/11/16 19:33:21.000.423,=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/11/16 19:34:06.000.730,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Luccas\Desktop\Teste DSIN - Dev\2\CalculaValores.pas</Transaction>
+    <Transaction>2023/11/16 19:34:06.000.730,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\Luccas\Desktop\Teste DSIN - Dev\2\CalculaValores.dfm</Transaction>
+    <Transaction>2023/11/16 19:35:19.000.392,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\Luccas\Desktop\Teste DSIN - Dev\2\valoresSol.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/11/16 19:09:36.000.718,=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/11/16 19:10:11.000.704,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario.pas=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/11/16 19:10:11.000.704,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario.dfm=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2023/11/16 19:10:31.000.308,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario1.dfm=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario.dfm</Transaction>
+    <Transaction>2023/11/16 19:10:31.000.308,C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario1.pas=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario.pas</Transaction>
+    <Transaction>2023/11/16 19:21:22.000.033,C:\Users\Luccas\Desktop\Teste DSIN - Dev\1\CalculoSalario.pas=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario1.pas</Transaction>
+    <Transaction>2023/11/16 19:21:22.000.033,C:\Users\Luccas\Desktop\Teste DSIN - Dev\1\CalculoSalario.dfm=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\CalculoSalario1.dfm</Transaction>
+    <Transaction>2023/11/16 19:21:42.000.794,C:\Users\Luccas\Desktop\Teste DSIN - Dev\1\Calculo.dproj=C:\Users\Luccas\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

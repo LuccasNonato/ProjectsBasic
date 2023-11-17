@@ -1,0 +1,63 @@
+unit validanumeros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.Math;
+
+type
+  TForm2 = class(TForm)
+    btnCalcular: TButton;
+    procedure btnCalcularClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.btnCalcularClick(Sender: TObject);
+var
+  j, N, i, somaDivisores, raiz: Integer;
+
+begin
+  // Solicitação de entrada de dados
+  N := StrToInt(InputBox('Informação', 'Informe um número inteiro positivo N:', ''));
+
+  // Avaliação de cada número da sequência
+  for i := 1 to N do
+  begin
+    // Verificar se é um número perfeito
+    somaDivisores := 0;
+    for j := 1 to i div 2 do
+    begin
+      if i mod j = 0 then
+        somaDivisores := somaDivisores + j;
+    end;
+
+    // Verificar se é múltiplo de 3, múltiplo de 5 e raiz inteira
+    raiz := Trunc(Sqrt(i));
+
+    // Imprimir mensagens conforme as condições
+    if (somaDivisores = i) then
+      ShowMessageFmt('%d é um número perfeito.', [i]);
+
+    if (i mod 3 = 0) then
+      ShowMessageFmt('%d é múltiplo de 3.', [i]);
+
+    if (i mod 5 = 0) then
+      ShowMessageFmt('%d é múltiplo de 5.', [i]);
+
+    if (raiz * raiz = i) then
+      ShowMessageFmt('%d é um número com raiz quadrada inteira.', [i]);
+  end;
+end;
+
+end.
